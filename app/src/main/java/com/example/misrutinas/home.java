@@ -9,15 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class FragmentInicial extends Fragment {
+public class home extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View vista= inflater.inflate(R.layout.fragment_inicial, container, false);
-        return vista;
-
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

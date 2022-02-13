@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void SINGIN(View v){
-        Intent intent = new Intent(MainActivity.this,ActivityFragmentos.class);
+        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
         startActivity(intent);
     }
 }

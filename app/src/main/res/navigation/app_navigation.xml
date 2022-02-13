@@ -2,8 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/app_navigation"
-    app:startDestination="@id/login">
+    android:id="@+id/app_navigation">
 
     <activity
         android:id="@+id/mainActivity"
@@ -11,22 +10,8 @@
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
     <activity
-        android:id="@+id/activityFragmentos"
-        android:name="com.example.misrutinas.ActivityFragmentos"
-        android:label="activity_fragmentos"
-        tools:layout="@layout/activity_fragmentos" />
-    <fragment
-        android:id="@+id/fragmentInicial"
-        android:name="com.example.misrutinas.FragmentInicial"
-        android:label="fragment_inicial"
-        tools:layout="@layout/fragment_inicial" />
-    <fragment
-        android:id="@+id/login"
-        android:name="com.example.misrutinas.Login"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_login_to_fragmentInicial"
-            app:destination="@id/fragmentInicial" />
-    </fragment>
+        android:id="@+id/loginActivity"
+        android:name="com.example.misrutinas.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

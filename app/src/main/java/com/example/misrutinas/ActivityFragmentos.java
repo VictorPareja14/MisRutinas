@@ -1,45 +1,61 @@
 package com.example.misrutinas;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainer;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 
-public class ActivityFragmentos extends AppCompatActivity implements CallbackFragment {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
+public class ActivityFragmentos extends AppCompatActivity {
     Fragment fragment;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+
+   private BottomNavigationView navigation;
+    FragmentContainerView fragmentContainerView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragmentos);
-        añadirFragmento();
+        //añadirFragmento();
+        navigation = findViewById(R.id.bottomNavigation);
+        navigation.setOnItemSelectedListener(bottomNavMethod);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new AndroidFragment()).commit();
+
 
     }
 
-    public void añadirFragmento(){
-        Login fragment = new Login();
-        fragment.setCallbackFragment(this);
-        fragmentManager=getSupportFragmentManager();
-        fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragmentContainerView3,fragment);
-        fragmentTransaction.commit();
-    }
-    public void reemplazarFragmento(){
-        fragment=new FragmentInicial();
-        fragmentManager=getSupportFragmentManager();
-        fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentContainerView3,fragment);
-        fragmentTransaction.commit();
+    private BottomNavigationView.OnItemSelectedListener bottomNavMethod=new NavigationBarView.OnItemSelectedListener(){
 
-    }
 
-    @Override
-    public void cambiaFragmento() {
-        reemplazarFragmento();
-    }
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment=null;
+
+            switch (item.getItemId()){
+                case R.id.android:
+                    fragment=new AndroidFragment();
+                    break;
+                case R.id.home:
+                    fragment=new home();
+                    break;
+                case R.id.search:
+                    fragment=new SearchFragment();
+                    break;
+            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+            return true;
+            }
+    };
 }
