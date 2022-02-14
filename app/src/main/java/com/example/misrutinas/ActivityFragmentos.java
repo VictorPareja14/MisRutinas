@@ -31,7 +31,7 @@ public class ActivityFragmentos extends AppCompatActivity {
         //añadirFragmento();
         navigation = findViewById(R.id.bottomNavigation);
         navigation.setOnItemSelectedListener(bottomNavMethod);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new AndroidFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new home()).commit();
 
 
     }

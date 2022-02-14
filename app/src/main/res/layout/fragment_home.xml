@@ -3,12 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home">
+    tools:context=".home"
+    android:background="@color/purple_700"
+
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/login_failed" />
+        android:layout_height="314dp"
+        android:text="HOME"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp" />
 
 </FrameLayout>
