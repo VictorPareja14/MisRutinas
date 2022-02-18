@@ -31,7 +31,7 @@ public class ActivityFragmentos extends AppCompatActivity {
         //añadirFragmento();
         navigation = findViewById(R.id.bottomNavigation);
         navigation.setOnItemSelectedListener(bottomNavMethod);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new home()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new resumen()).commit();
 
 
     }
@@ -45,10 +45,10 @@ public class ActivityFragmentos extends AppCompatActivity {
 
             switch (item.getItemId()){
                 case R.id.android:
-                    fragment=new AndroidFragment();
+                    fragment=new anadir();
                     break;
                 case R.id.home:
-                    fragment=new home();
+                    fragment=new resumen();
                     break;
                 case R.id.search:
                     fragment=new SearchFragment();

@@ -28,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         if (usuario.getText().toString().equals("admin") && pass.getText().toString().equals("admin")) {
             Intent intent = new Intent(LoginActivity.this,ActivityFragmentos.class);
             startActivity(intent);
+            finish();
+
         } else {
             Toast.makeText(login.getContext(), "Te has equivocado", Toast.LENGTH_SHORT).show();
 
