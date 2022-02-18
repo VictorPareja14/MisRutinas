@@ -28,15 +28,8 @@ public class resumen extends Fragment {
 
         resumen = (RecyclerView) vista.findViewById(R.id.RecyclerResumen);
         elementos = new ArrayList<>();
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
-        elementos.add(new ListResumen("jhghnghngbnh", "sasad","asdasdasd"));
+        elementos.add(new ListResumen("Martes", "Inferior","Sentadilla 4x10"));
+
 
         ResumenAdapter resumenAdapter = new ResumenAdapter(getContext(),elementos);
 
