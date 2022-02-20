@@ -1,5 +1,6 @@
 package com.example.misrutinas;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,7 @@ public class anadir extends Fragment {
     }
     EditText etdia;
     Button btn;
+    ListResumen L;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,7 +28,16 @@ public class anadir extends Fragment {
         // Inflate the layout for this fragment
         View vista= inflater.inflate(R.layout.anadir, container, false);
         etdia = (EditText) vista.findViewById(R.id.etdia);
+        btn = (Button) vista.findViewById(R.id.btnAñadir);
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundleParametros = new Bundle();
+                //bundleParametros.putString(,etdia.getText().toString());
+
+            }
+        });
 
         return vista;
         

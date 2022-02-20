@@ -34,11 +34,12 @@
             android:layout_height="52dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="116dp"
-            android:background="@drawable/shape"
-            android:backgroundTint="#615D5D"
+            android:background="@drawable/shape2"
+            android:shadowColor="#473C3C"
             android:text="Button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etrutina" />
+            app:layout_constraintTop_toBottomOf="@+id/etrutina"
+            app:rippleColor="@color/purple_700" />
 
         <EditText
             android:id="@+id/etrutina"
@@ -120,6 +121,7 @@
             android:src="@drawable/logotipo_deportes_pesas_negro_y_naranja__1__removebg_preview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
