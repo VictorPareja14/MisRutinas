@@ -41,31 +41,21 @@
 
     <Button
         android:id="@+id/boton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="47dp"
         android:layout_marginStart="130dp"
         android:layout_marginEnd="131dp"
-        android:layout_marginBottom="216dp"
-        android:background="@drawable/shape"
+        android:layout_marginBottom="244dp"
+        android:background="@drawable/shape2"
+        android:backgroundTint="#615D5D"
+        android:fontFamily="@font/alef"
         android:onClick="iniciaSesion"
-        android:shadowColor="#EA2424"
         android:text="@string/action_sign_in"
-        android:textColor="#DC4040"
-        android:textColorHighlight="#ED2020"
-        android:textColorHint="#F33333"
-        android:textColorLink="#DA1E1E"
+
+
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#E32C2C" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="525dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

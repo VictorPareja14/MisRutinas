@@ -22,20 +22,26 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
         android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="36dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/shape"
-        android:fontFamily="sans-serif-condensed"
+
+        android:backgroundTint="#615D5D"
+        android:fontFamily="@font/alef"
         android:hapticFeedbackEnabled="false"
         android:onClick="SINGIN"
         android:text="LOGIN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswd" />
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
