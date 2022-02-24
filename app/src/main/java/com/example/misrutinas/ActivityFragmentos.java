@@ -52,7 +52,7 @@ public class ActivityFragmentos extends AppCompatActivity {
                     fragment=new resumen();
                     break;
                 case R.id.search:
-                    fragment=new SearchFragment();
+                    fragment=new SettingsFragment();
                     break;
 
             }
