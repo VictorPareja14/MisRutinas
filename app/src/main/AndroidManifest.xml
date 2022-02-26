@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MisRutinas">
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_settings" />
-        <activity
             android:name=".logout"
             android:exported="false" />
         <activity

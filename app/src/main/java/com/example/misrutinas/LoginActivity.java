@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void iniciaSesion(View v) {
 
-        if (usuario.getText().toString().equals("admin") && pass.getText().toString().equals("admin")) {
+        if (usuario.getText().toString().equals("") && pass.getText().toString().equals("")) {
             Intent intent = new Intent(LoginActivity.this,ActivityFragmentos.class);
             startActivity(intent);
             finish();

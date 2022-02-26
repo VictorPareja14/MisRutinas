@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,33 +12,43 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class anadir extends Fragment {
     public anadir() {
         // Required empty public constructor
     }
-    EditText etdia;
     Button btn;
-    ListResumen L;
+    List<ListResumen> elementos;
+    RecyclerView resumen;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
 
-        // Inflate the layout for this fragment
+
         View vista= inflater.inflate(R.layout.anadir, container, false);
-        etdia = (EditText) vista.findViewById(R.id.etdia);
-        btn = (Button) vista.findViewById(R.id.btnAñadir);
+        btn = vista.findViewById(R.id.btnAñadir);
+        resumen = (RecyclerView) vista.findViewById(R.id.RecyclerResumen);
+        elementos = new ArrayList<>();
+        EditText etDia = vista.findViewById(R.id.etdia);
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle bundleParametros = new Bundle();
-                //bundleParametros.putString(,etdia.getText().toString());
+            Bundle bundle = new Bundle();
+            bundle.putString("keydia", etDia.getText().toString());
+            resumen fragment = new resumen();
+            fragment.setArguments(bundle);
+            getFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
 
             }
         });
+
 
         return vista;
         

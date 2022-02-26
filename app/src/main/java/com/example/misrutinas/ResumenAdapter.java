@@ -43,6 +43,8 @@ public class ResumenAdapter extends RecyclerView.Adapter<ResumenAdapter.ViewHold
         return mData.size();
     }
 
+
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView  tvDia,tvGrupo,tvDescripcion;
 
