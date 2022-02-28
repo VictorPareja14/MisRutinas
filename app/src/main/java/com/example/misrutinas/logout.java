@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
-
+//SIMPLE SWITCH PARA DECONECTAR PARA UTILIZAR TRANSICIONES ENTRE ACTIVIDADES
 public class logout extends AppCompatActivity {
     Switch logout;
     @Override

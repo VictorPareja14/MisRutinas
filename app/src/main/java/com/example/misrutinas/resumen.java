@@ -17,24 +17,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+//AQUI CARGA LAS RUTINAS, CON EL BOTÓN SI FUNCIONA AUNQUE NO PERSISTE. SI INTENTO UTILIZAR EL PUTEXTRA EXPLOTA.
 public class resumen extends Fragment implements interfazRecycler {
     List<ListResumen> elementos;
     RecyclerView resumen;
     ResumenAdapter resumenAdapter;
-    Button bt; EditText et;
-
+    Button bt; TextView tv;
+    View vista;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View vista=inflater.inflate(R.layout.resumen, container, false);
+        vista=inflater.inflate(R.layout.resumen, container, false);
         bt = vista.findViewById(R.id.button2);
-
 
         resumen = (RecyclerView) vista.findViewById(R.id.RecyclerResumen);
         elementos = new ArrayList<>();
@@ -50,7 +50,6 @@ public class resumen extends Fragment implements interfazRecycler {
 
         resumen.setLayoutManager(new LinearLayoutManager(getContext()));
         resumen.setAdapter(resumenAdapter);
-
 
 
 
@@ -85,6 +84,8 @@ public class resumen extends Fragment implements interfazRecycler {
 
             }
         });
+
+
 
         return vista;
 

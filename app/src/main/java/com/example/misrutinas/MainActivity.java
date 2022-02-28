@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+//PASA A LA ACTIVIDAD FRAGMENTOS
     public void SINGIN(View v){
         Intent intent = new Intent(MainActivity.this,LoginActivity.class);
         startActivity(intent);

@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-
+//ADAPTADOR PARA EL RECYCLER
 public class ResumenAdapter extends RecyclerView.Adapter<ResumenAdapter.ViewHolder> {
     private Context contexto;
     private List<ListResumen> mData;

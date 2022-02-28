@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+//SE CARGAN TODOS LOS FRAGMENTOS Y SE VAN NAVEGANDO CON ELLOS A TRAVÉS DE LOS BOTONES ANDROID;HOME;SEARCH
 
 public class ActivityFragmentos extends AppCompatActivity {
     Fragment fragment;
@@ -38,7 +39,6 @@ public class ActivityFragmentos extends AppCompatActivity {
     }
 
     private BottomNavigationView.OnItemSelectedListener bottomNavMethod=new NavigationBarView.OnItemSelectedListener(){
-
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
